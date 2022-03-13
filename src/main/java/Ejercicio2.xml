@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+
+<!DOCTYPE vehiculos [
+        <!ELEMENT vehiculos (vehiculo)>
+        <!ELEMENT vehiculo (nombre,modelo,fabricacion,modificaciones)+>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT modelo (#PCDATA)>
+        <!ELEMENT fabricacion (inicio,fin)>
+        <!ELEMENT inicio (dia,mes,anyo)>
+        <!ELEMENT dia (#PCDATA)>
+        <!ELEMENT mes (#PCDATA)>
+        <!ELEMENT anyo (#PCDATA)>
+        <!ELEMENT fin (dia,mes,anyo)>
+        <!ELEMENT modificaciones (modificacion)*>
+        <!ELEMENT modificacion (#PCDATA)>
+        ]>
+
+<vehiculos>
+    <vehiculo>
+        <nombre>Count Zero</nombre>
+        <modelo>Series I, 80"</modelo>
+        <fabricacion>
+            <inicio>
+                <dia>21</dia>
+                <mes>July</mes>
+                <anyo>1949</anyo>
+            </inicio>
+            <fin>
+                <dia>9</dia>
+                <mes>August</mes>
+                <anyo>1949</anyo>
+            </fin>
+        </fabricacion>
+        <modificaciones>
+            <modificacion>Change Engine</modificacion>
+            <modificacion>Change pedals</modificacion>
+            <modificacion>Change gearbox</modificacion>
+            <modificacion>Fit Rollcage</modificacion>
+        </modificaciones>
+    </vehiculo>
+</vehiculos>

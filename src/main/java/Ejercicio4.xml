@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+
+<!DOCTYPE catalogoLibro [
+        <!ELEMENT catalogoLibro (libro)*>
+        <!ELEMENT libro (titulo,autor+,fecha,ISBN,editor)>
+        <!-- ATTLIST -->
+        <!ATTLIST categoria (autobiografia|noficcion|ficcion) #REQUIRED
+        enstock (true|false) "false"
+        revisor CDATA "">
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT autor (#PCDATA)>
+        <!ELEMENT fecha (mes?, anyo)>
+        <!ELEMENT ISBN (#PCDATA)>
+        <!ELEMENT editor (#PCDATA)>
+        <!--mes anyo-->
+        <!ELEMENT mes (#PCDATA)>
+        <!ELEMENT anyo (#PCDATA)>
+
+        <!--categoria-->
+        <!ELEMENT autobiografia (#PCDATA)>
+        <!ELEMENT noficcion (#PCDATA)>
+        <!ELEMENT ficcion (#PCDATA)>
+
+        <!--enstock-->
+        <!ELEMENT enstock (#PCDATA)>
+        <!ELEMENT true (#PCDATA)>
+        <!ELEMENT false (#PCDATA)>
+        ]>
+<catalogoLibro>
+    <libro>
+        <titulo>Los hombres que no amaban a las mujeres</titulo>
+        <autor>Stieg Larsson</autor>
+        <fecha>
+            <mes></mes>
+            <anyo></anyo>
+        </fecha>
+        <ISBN>978-84-233-4044-6</ISBN>
+        <editor>Destino</editor>
+        <categoria>
+            <autobiografia></autobiografia>
+            <noficcion></noficcion>
+            <ficcion></ficcion>
+        </categoria>
+
+        <enstock>
+            <true></true>
+            <false></false>
+        </enstock>
+    </libro>
+
+</catalogoLibro>

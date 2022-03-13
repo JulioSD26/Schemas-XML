@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="vehiculos" type="xs:string"/>
+  <xs:complexType name="inicioType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="dia"/>
+      <xs:element type="xs:string" name="mes"/>
+      <xs:element type="xs:string" name="anyo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="finType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="dia"/>
+      <xs:element type="xs:string" name="mes"/>
+      <xs:element type="xs:string" name="anyo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fabricacionType">
+    <xs:sequence>
+      <xs:element type="inicioType" name="inicio"/>
+      <xs:element type="finType" name="fin"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificacionesType">
+    <xs:sequence>
+      <xs:element name="modificacion" maxOccurs="unbounded" minOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Change Engine"/>
+            <xs:enumeration value="Change pedals"/>
+            <xs:enumeration value="Change gearbox"/>
+            <xs:enumeration value="Fit Rollcage"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vehiculoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nombre"/>
+      <xs:element type="xs:string" name="modelo"/>
+      <xs:element type="fabricacionType" name="fabricacion"/>
+      <xs:element type="modificacionesType" name="modificaciones"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vehiculosType">
+    <xs:sequence>
+      <xs:element type="vehiculoType" name="vehiculo"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
